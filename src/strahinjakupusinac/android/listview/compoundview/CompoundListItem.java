@@ -1,5 +1,6 @@
 package strahinjakupusinac.android.listview.compoundview;
 
+import strahinjakupusinac.android.R;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.Gravity;
@@ -25,6 +26,7 @@ public class CompoundListItem extends LinearLayout {
 		addView(mCheckBox, checkBoxLayoutParams);
 
 		mThumbnail = new ImageView(context);
+		mThumbnail.setImageResource(R.drawable.ic_launcher);
 		addView(mThumbnail);
 
 		LinearLayout textLayout = new LinearLayout(context);
@@ -45,6 +47,7 @@ public class CompoundListItem extends LinearLayout {
 		addView(textLayout);
 
 		mImage = new ImageView(context);
+		mImage.setImageResource(R.drawable.ic_launcher);
 		addView(mImage);
 	}
 

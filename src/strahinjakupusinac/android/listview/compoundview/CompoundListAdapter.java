@@ -70,11 +70,17 @@ public class CompoundListAdapter extends BaseAdapter {
 		@Override
 		protected Void doInBackground(Void... params) {
 			int counter = 0;
-			while (cursor.moveToNext()) {
-				String imagePath = cursor.getString(columnIndex);
-				bitmaps.add(counter, BitmapUtils.scaleBitmapFromFile(imagePath, new Float(context.getResources().getDisplayMetrics().density * 60).intValue()));
-				counter++;
-				publishProgress(counter);
+
+			try {
+				while (cursor.moveToNext()) {
+					String imagePath = cursor.getString(columnIndex);
+					bitmaps.add(counter,
+							BitmapUtils.scaleBitmapFromFile(imagePath, new Float(context.getResources().getDisplayMetrics().density * 60).intValue()));
+					counter++;
+					publishProgress(counter);
+				}
+			} catch (IllegalStateException e) {
+				// silently ignore
 			}
 			return null;
 		}
