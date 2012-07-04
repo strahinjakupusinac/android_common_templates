@@ -1,6 +1,7 @@
 package strahinjakupusinac.android;
 
 import strahinjakupusinac.android.gallery.ImageGalleryActivity;
+import strahinjakupusinac.android.grid.GridViewActivity;
 import strahinjakupusinac.android.listview.compoundview.ListWithCompoundViewsActivity;
 import strahinjakupusinac.android.listview.customview.ListWithCustomViewsActivity;
 import strahinjakupusinac.android.viewpager.ViewPagerGalleryActivity;
@@ -13,7 +14,7 @@ import android.widget.Button;
 
 public class StartScreenActivity extends Activity implements OnClickListener {
 
-	private Button btn1, btn2, btn3, btn4;
+	private Button btn1, btn2, btn3, btn4, btn5;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,11 +25,13 @@ public class StartScreenActivity extends Activity implements OnClickListener {
 		btn2 = (Button) findViewById(R.id.startscreen_gallery_button);
 		btn3 = (Button) findViewById(R.id.startscreen_custom_list_button);
 		btn4 = (Button) findViewById(R.id.startscreen_compound_list_button);
+		btn5 = (Button) findViewById(R.id.startscreen_grid_button);
 
 		btn1.setOnClickListener(this);
 		btn2.setOnClickListener(this);
 		btn3.setOnClickListener(this);
 		btn4.setOnClickListener(this);
+		btn5.setOnClickListener(this);
 	}
 
 	public void onClick(View v) {
@@ -40,6 +43,8 @@ public class StartScreenActivity extends Activity implements OnClickListener {
 			startActivity(new Intent(getApplicationContext(), ListWithCustomViewsActivity.class));
 		} else if (v == btn4) {
 			startActivity(new Intent(getApplicationContext(), ListWithCompoundViewsActivity.class));
+		} else if (v == btn5) {
+			startActivity(new Intent(getApplicationContext(), GridViewActivity.class));
 		}
 
 	}

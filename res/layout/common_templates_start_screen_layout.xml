@@ -31,6 +31,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="list (compound)" />
+
+        <Button
+            android:id="@+id/startscreen_grid_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="grid" />
     </LinearLayout>
 
 </ScrollView>
