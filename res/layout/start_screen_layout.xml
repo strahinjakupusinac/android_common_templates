@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/startscreen_viewpager_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ViewPager" />
+
+        <Button
+            android:id="@+id/startscreen_gallery_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BROKEN! Gallery BROKEN!" />
+
+        <Button
+            android:id="@+id/startscreen_custom_list_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="list (custom)" />
+
+        <Button
+            android:id="@+id/startscreen_compound_list_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="list (compound)" />
+
+        <Button
+            android:id="@+id/startscreen_grid_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="grid" />
+    </LinearLayout>
+
+</ScrollView>
